@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_20_141824) do
+ActiveRecord::Schema.define(version: 2018_08_20_152347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posters", force: :cascade do |t|
+    t.text "description"
+    t.date "date"
+    t.integer "price"
+    t.text "photo"
+    t.bigint "artist_id"
+    t.bigint "venue_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_posters_on_artist_id"
+    t.index ["user_id"], name: "index_posters_on_user_id"
+    t.index ["venue_id"], name: "index_posters_on_venue_id"
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.date "date"
+    t.bigint "poster_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["poster_id"], name: "index_transactions_on_poster_id"
+    t.index ["user_id"], name: "index_transactions_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +54,21 @@ ActiveRecord::Schema.define(version: 2018_08_20_141824) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "venues", force: :cascade do |t|
+    t.string "name"
+    t.string "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "posters", "artists"
+  add_foreign_key "posters", "users"
+  add_foreign_key "posters", "venues"
+  add_foreign_key "transactions", "posters"
+  add_foreign_key "transactions", "users"
 end
