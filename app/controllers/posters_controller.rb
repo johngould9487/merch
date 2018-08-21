@@ -15,8 +15,11 @@ class PostersController < ApplicationController
   def create
     @poster = Poster.new(poster_params)
     @poster.user = current_user
-    @poster.save
-    redirect_to posters_path
+    if @poster.save
+        redirect_to posters_path
+    else
+      render :new
+    end
   end
 
   def edit
