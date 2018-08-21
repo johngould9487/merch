@@ -14,8 +14,8 @@ class PostersController < ApplicationController
 
   def create
     @poster = Poster.new(poster_params)
+    @poster.user = current_user
     @poster.save
-    raise
     redirect_to posters_path
   end
 
@@ -24,6 +24,7 @@ class PostersController < ApplicationController
 
   def update
     @poster.update(poster_params)
+    redirect_to poster_path(params[:id])
   end
 
   def destroy
@@ -36,7 +37,7 @@ class PostersController < ApplicationController
   end
 
   def poster_params
-    params.require(:poster).permit(:description,
+    params.require(:poster).permit(:artist_name, :venue_name, :description,
       :date, :price, :photo)
   end
 end

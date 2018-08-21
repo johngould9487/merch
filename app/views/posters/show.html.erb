@@ -1,5 +1,8 @@
 <h1><%= @poster.description %></h1>
+<h1><%= @poster.artist_name %></h1>
+<h1><%= @poster.venue_name %></h1>
+<h1><%= @poster.date %></h1>
 
-<p>viewing the poster</p>
+<%= link_to "edit", edit_poster_path %>
 
 <%= link_to "back", posters_path %>

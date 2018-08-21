@@ -1,10 +1,1 @@
-<%= simple_form_for @poster do |f| %>
-  <%= f.association :venue %>
-  <%= f.association :artist %>
-  <%= f.input :description %>
-  <%= f.input :date %>
-  <%= f.input :price %>
-  <%= f.input :photo %>
-  <%= f.submit "Add poster", class: "btn btn-primary" %>
-<% end %>
-
+<%= render 'shared/poster_details' %>
