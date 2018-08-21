@@ -1,0 +1,9 @@
+<h1>Posters</h1>
+
+<% @posters.each do |poster| %>
+  <p><%= poster.description %></p>
+  <p><%= poster.artist.name %></p>
+  <%= link_to "Go to poster", poster_path(poster.id) %>
+<% end %>
+
+<%= link_to "Add new poster", new_poster_path %>
