@@ -2,7 +2,7 @@
 
 <% @posters.each do |poster| %>
   <p><%= poster.description %></p>
-  <p><%= poster.artist.name %></p>
+  <p><%= poster.user.email %></p>
   <%= link_to "Go to poster", poster_path(poster.id) %>
 <% end %>
 

@@ -1,6 +1,6 @@
 class Poster < ApplicationRecord
   belongs_to :user
 
-  validates :description, :date, :price, :photo, presence: true
+  validates :venue_name, :artist_name, :description, :date, :price, :photo, presence: true
 
 end
