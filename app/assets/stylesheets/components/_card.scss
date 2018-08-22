@@ -1,11 +1,9 @@
 .card {
   height: 400px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
-  background-position: center;
-  color: white;
+  color: #53A0C1;
   position: relative;
   margin: 20px 0;
+  box-shadow:1px 1px 1px #f9f9f9;
 }
 .card-user {
   position: absolute;
@@ -22,9 +20,9 @@
   text-transform: uppercase;
 }
 .card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  p{
+    padding:5px;  }
+
 }
 
 .price {
@@ -52,4 +50,9 @@
 .card-link:hover {
   opacity: 0.2;
 }
+.card-container{
+  height:320px;
+  background-size: cover !important;
+  background-position: center;
 
+}
