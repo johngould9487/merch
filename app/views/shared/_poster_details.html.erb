@@ -1,10 +1,10 @@
 <div class="container">
   <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-      <%= simple_form_for @poster, method: "get" do |f| %>
+      <%= simple_form_for @poster do |f| %>
         <%= f.input :artist_name, label: "Which artist was headlining?" %>
         <%= f.input :venue_name, label: "Which venue hosted this gig?" %>
         <%= f.input :description %>
-        <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :date, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :price %>
         <%= f.input :photo %>
         <%= f.submit "Add poster", class: "btn btn-primary" %>

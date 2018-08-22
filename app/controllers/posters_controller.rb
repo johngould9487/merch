@@ -16,7 +16,7 @@ class PostersController < ApplicationController
     @poster = Poster.new(poster_params)
     @poster.user = current_user
     if @poster.save
-        redirect_to posters_path
+        redirect_to poster_path(@poster)
     else
       render :new
     end
