@@ -4,7 +4,6 @@
       <h2><%= @poster.artist_name%> performing at the <%= @poster.venue_name %> on <%= @poster.date.strftime('%x') %></h2>
       <h5><%= @poster.description %></h5>
       <%= link_to "Buy", '#', :class => "btn btn-danger"  %>
-      <%= link_to "Edit", edit_poster_path, :class => "btn btn-primary" %>
       <%= link_to "Back", posters_path, :class => "btn btn-primary"  %>
     </div>
       <%= image_tag "poster.jpg", width: '400', height: '600', align: 'right' %>
