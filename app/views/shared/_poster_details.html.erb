@@ -3,11 +3,11 @@
       <%= simple_form_for @poster do |f| %>
         <%= f.input :artist_name, label: "Which artist was headlining?" %>
         <%= f.input :venue_name, label: "Which venue hosted this gig?" %>
-        <%= f.input :description %>
-        <%= f.input :date, required: false, input_html: {class: "datepicker"} %>
-        <%= f.input :price %>
+        <%= f.input :description, label: "Tell us more about this poster" %>
+        <%= f.input :date, label: "What date was the gig?", required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :price, label: "Price in GBP" %>
         <%= f.input :photo %>
-        <%= f.submit "Add poster", class: "btn btn-primary" %>
+        <%= f.submit "Add poster image url", class: "btn btn-primary" %>
       <% end %>
   </div>
 </div>
