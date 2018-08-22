@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: url('https://files.slack.com/files-pri/T02NE0241-FCD2BDFHQ/view_in_room.jpg');">
+<div class="banner" style="background-image: url('https://res.cloudinary.com/duspt82gb/image/upload/v1534947776/view_in_room.jpg');">
   <div class="banner-content">
     <h1>Find Gig Posters</h1>
     <p>from the best night of your life</p>
@@ -10,24 +10,34 @@
 
 <div class="container">
   <div class="row">
+
+
+
     <% @posters.each do |poster| %>
       <div class="col-xs-12 col-sm-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('https://res.cloudinary.com/cocktailsdelivereddotcom/image/upload/v1534881259/nivrana.jpg');">
+        <div class="card" >
 
-          <div class="card-container">
-            <div class="card-category"><%= poster.artist_name %> </div>
-            <div class="card-description">
-              <p><%= poster.date %> </p>
-              <p><%= poster.venue_name %> </p>
+          <div class="card-container" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url(<%= poster.photo %>);">
+            <div class="card-category">
+
             </div>
-            <div class="price">
-              <h3>£<%= poster.price %> </h3>
+          </div>
+
+           <div class="card-description">
+              <h4><%= poster.artist_name %></h4>
+              <p> <%= poster.venue_name %> - <%= poster.date %> </p>
+
+              <div class="price">
+                <h3>£<%= poster.price %> </h3>
+              </div>
             </div>
             <%= link_to "", poster_path(poster.id), class: "card-link" %>
           </div>
+
         </div>
 
-      </div>
     <% end %>
-</div>
+
+
+  </div>
 </div>
