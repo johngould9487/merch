@@ -1,7 +1,9 @@
 <div class="container show-details">
   <div class="row">
     <div class="col-sm-5">
-      <%= image_tag "poster.jpg", width: '400', height: '600', align: 'left'%>
+      <%# image_tag url('@poster.photo'), width: '400', height: '600', align: 'left'%>
+      <img src=" <%= @poster.photo %> "
+      style="width: 400px; height: 600px;">
     </div>
     <div class="col-sm-7">
       <h1><%= @poster.artist_name%></h1> <h2>Performing at: <%= @poster.venue_name %></h2>
