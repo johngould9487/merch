@@ -1,35 +1,33 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 50%), url('https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae8584287da6fac5895bbe4fb80f9f5f&auto=format&fit=crop&w=1050&q=80');">
+<div class="banner" style="background-image: url('https://files.slack.com/files-pri/T02NE0241-FCD2BDFHQ/view_in_room.jpg');">
   <div class="banner-content">
-    <h1>Find Gig Posters from the best night of your life</h1>
-    <p>Learn to code with us in Berlin</p>
-    <a class="btn btn-primary btn-lg">Start now</a>
+    <h1>Find Gig Posters</h1>
+    <p>from the best night of your life</p>
+    <p><i class="fas fa-chevron-down"></i></p>
+    <p><i class="fas fa-chevron-down"></i></p>
   </div>
 </div>
 
-<div class="box">
-  <div class="container-1">
-    <span class="icon"><i class="fa fa-search"></i></span>
-    <input type="search" id="search" placeholder="Search..." />
-  </div>
-</div>
 
 <div class="container">
   <div class="row">
     <% @posters.each do |poster| %>
-    <div class="col-xs-12 col-sm-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1533319417894-6fbb331e5513?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f5860101522ec7375cc393576813c1aa&auto=format&fit=crop&w=675&q=80');">
-        <div class="card-category"><%= poster.artist_name %> </div>
-        <div class="card-description">
-          <p><%= poster.date %> </p>
-          <p><%= poster.venue_name %> </p>
-        </div>
-        <div class="price">
-          <h3>£<%= poster.price %> </h3>
-        </div>
-        <%= link_to "", poster_path(poster.id), class: "card-link" %>
-      </div>
-    </div>
+      <div class="col-xs-12 col-sm-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('https://res.cloudinary.com/cocktailsdelivereddotcom/image/upload/v1534881259/nivrana.jpg');">
 
+          <div class="card-container">
+            <div class="card-category"><%= poster.artist_name %> </div>
+            <div class="card-description">
+              <p><%= poster.date %> </p>
+              <p><%= poster.venue_name %> </p>
+            </div>
+            <div class="price">
+              <h3>£<%= poster.price %> </h3>
+            </div>
+            <%= link_to "", poster_path(poster.id), class: "card-link" %>
+          </div>
+        </div>
+
+      </div>
     <% end %>
-  </div>
+</div>
 </div>

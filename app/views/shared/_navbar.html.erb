@@ -1,19 +1,27 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
-  <% end %>
-
+  <div class="nav-search">
+    <%= link_to root_path, class: "navbar-wagon-brand" do %>
+      <%= image_tag "logo.png", height: 50 %>
+    <% end %>
+<!--
+    <div class="box"> -->
+      <div class="search-bar">
+        <span class="icon"><i class="fa fa-search"></i></span>
+        <input type="search" id="search" placeholder="Search..." />
+      </div>
+<!--     </div> -->
+  </div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+
 
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Search", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Sell", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-
+      <%= link_to "Watching", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Rare Finds", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
