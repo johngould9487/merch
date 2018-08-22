@@ -11,20 +11,23 @@
 <div class="container">
   <div class="row">
     <% @posters.each do |poster| %>
-    <div class="col-xs-12 col-sm-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1533319417894-6fbb331e5513?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f5860101522ec7375cc393576813c1aa&auto=format&fit=crop&w=675&q=80');">
-        <div class="card-category"><%= poster.artist_name %> </div>
-        <div class="card-description">
-          <p><%= poster.date %> </p>
-          <p><%= poster.venue_name %> </p>
-        </div>
-        <div class="price">
-          <h3>£<%= poster.price %> </h3>
-        </div>
-        <%= link_to "", poster_path(poster.id), class: "card-link" %>
-      </div>
-    </div>
+      <div class="col-xs-12 col-sm-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('https://res.cloudinary.com/cocktailsdelivereddotcom/image/upload/v1534881259/nivrana.jpg');">
 
+          <div class="card-container">
+            <div class="card-category"><%= poster.artist_name %> </div>
+            <div class="card-description">
+              <p><%= poster.date %> </p>
+              <p><%= poster.venue_name %> </p>
+            </div>
+            <div class="price">
+              <h3>£<%= poster.price %> </h3>
+            </div>
+            <%= link_to "", poster_path(poster.id), class: "card-link" %>
+          </div>
+        </div>
+
+      </div>
     <% end %>
-  </div>
+</div>
 </div>
