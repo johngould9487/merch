@@ -72,22 +72,22 @@ body{
 
 
 
-.card-container {
-  display: flex;
-  flex-direction: column; //Changing orientation to put elements vertically
-  flex-wrap: wrap; //Wrap any leftover to the next row
-  max-height: 1400px; //Wrap only works if the height is set explicitly
-}
+// .card-container {
+//   display: flex;
+//   flex-direction: column; //Changing orientation to put elements vertically
+//   flex-wrap: wrap; //Wrap any leftover to the next row
+//   max-height: 1400px; //Wrap only works if the height is set explicitly
+// }
 
-.card {
-  height: 250px;
-  width: 220px;
-  background-color: #741938;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-}
+// .card {
+//   height: 250px;
+//   width: 220px;
+//   background-color: #741938;
+//   margin-bottom: 1rem;
+//   margin-right: 1rem;
+// }
 
-.card:nth-child(odd){
-  background-color: #C61951;
-}
+// .card:nth-child(odd){
+//   background-color: #C61951;
+// }
 

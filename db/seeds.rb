@@ -19,5 +19,14 @@ user = User.create(email: "andy@andy.com", password: "123123")
 user = User.create(email: "alex@alex.com", password: "123123")
 Poster.create!(user: user, venue_name: "Apollo", artist_name: "Beatles", description: "Great gig, great poster", price: 4, photo: "djshdjsh", date: Time.now)
 
+Poster.create!(user: user, venue_name: "Apollo", artist_name: "Beatles", description: "Great gig, great poster", price: 4, photo: "djshdjsh", date: Time.now)
+
+Poster.create!(user: user, venue_name: "Apollo", artist_name: "Beatles", description: "Great gig, great poster", price: 4, photo: "djshdjsh", date: Time.now)
+
+Poster.create!(user: user, venue_name: "Apollo", artist_name: "Beatles", description: "Great gig, great poster", price: 4, photo: "djshdjsh", date: Time.now)
+
+Poster.create!(user: user, venue_name: "Apollo", artist_name: "Beatles", description: "Great gig, great poster", price: 4, photo: "djshdjsh", date: Time.now)
+
+
 
 puts "DB created"
