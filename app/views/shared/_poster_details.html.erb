@@ -4,7 +4,7 @@
         <%= f.input :artist_name, label: "Which artist was headlining?" %>
         <%= f.input :venue_name, label: "Which venue hosted this gig?" %>
         <%= f.input :description %>
-        <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :price %>
         <%= f.input :photo %>
         <%= f.submit "Add poster", class: "btn btn-primary" %>
