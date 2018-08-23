@@ -12,6 +12,13 @@
       </div>
 <!--     </div> -->
   </div>
+  <%= form_tag posters_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a poster"
+    %>
+  <% end %>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 

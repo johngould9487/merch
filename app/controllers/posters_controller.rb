@@ -2,8 +2,14 @@ class PostersController < ApplicationController
   before_action :find_poster, only: [:show, :edit, :update, :destory]
 
   def index
-    @posters = Poster.all
+    if params[:query].present?
+      sql_query = "posters.artist_name ILIKE :query OR posters.venue_name ILIKE :query"
+      @posters = Poster.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @posters = Poster.all
+    end
   end
+
 
   def show
   end
