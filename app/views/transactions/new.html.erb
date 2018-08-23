@@ -9,7 +9,7 @@
       <h2>Buying from: <%= @poster.user.email %></h2>
       <h2>You pay: £<%= @poster.price %> </h2>
       <%= simple_form_for([@poster, @transaction]) do |f| %>
-        <%= f.submit "Confirm Purchase", class: "btn btn-lg btn-success" %>
+        <%= f.submit "Confirm Purchase", class: "btn btn-lg btn-primary" %>
       <% end %>
     </div>
   </div>
