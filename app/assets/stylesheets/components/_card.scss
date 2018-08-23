@@ -1,5 +1,5 @@
 .card {
-  height: 400px;
+  height: 450px;
   color: #53A0C1;
   position: relative;
   margin: 20px 0;
@@ -12,25 +12,19 @@
   width: 40px;
   border-radius: 50%;
 }
-.card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 15px;
-  text-transform: uppercase;
-}
+// .card-category {
+//   position: absolute;
+//   top: 10px;
+//   left: 10px;
+//   font-size: 15px;
+//   text-transform: uppercase;
+// }
 .card-description {
-  p{
-    padding:5px;  }
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.price {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  z-index: 2147483647;
-}
 .card-description h2 {
   font-size: 24px;
 }
@@ -43,6 +37,7 @@
 .card-description p {
   font-size: 14px;
   opacity: 0.9;
+  padding:5px;
 }
 
 
@@ -60,8 +55,7 @@
   opacity: 0.2;
 }
 .card-container{
-  height:320px;
+  height:370px;
   background-size: cover !important;
   background-position: center;
-
 }
