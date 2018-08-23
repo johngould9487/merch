@@ -7,4 +7,3 @@ flatpickr(".datepicker", {
     dateFormat: "Y-m-d",
 })
 
-console.log('Hello world');
