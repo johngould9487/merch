@@ -13,7 +13,7 @@
       <% if @poster.sold %>
         <p>Sold!</p>
       <% else %>
-        <%= link_to "Buy Now", new_poster_transaction_path(@poster.id), :class => "btn btn-lg btn-danger"  %>
+        <%= link_to "Buy Now", new_poster_transaction_path(@poster.id), :class => "btn btn-lg btn-primary"  %>
       <% end %>
       <div class="user-info">
         <div class="seller">
