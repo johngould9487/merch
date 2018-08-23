@@ -12,8 +12,10 @@
       <h1>£<%= @poster.price %> </h1>
       <% if @poster.sold %>
         <p>Sold!</p>
-      <% else %>
+      <% elsif user_signed_in? %>
         <%= link_to "Buy Now", new_poster_transaction_path(@poster.id), :class => "btn btn-lg btn-danger"  %>
+      <% else %>
+        <%= link_to "Login to buy", user_session_path, class: "btn btn-danger" %>
       <% end %>
       <div class="user-info">
         <div class="seller">
