@@ -6,9 +6,10 @@
       style="width: 400px; height: 600px;">
     </div>
     <div class="col-sm-7">
-      <h1><%= @poster.artist_name%></h1> <h2>Performing at: <%= @poster.venue_name %></h2>
-      <h2></%> On: <%= @poster.date.strftime("#{@poster.date.day.ordinalize} %B %Y") %></h2>
-      <p><%= @poster.description %></p>
+      <h1><%= @poster.artist_name%></h1>
+      <p><i class="fas fa-angle-double-left"></i> <%= @poster.description %> <i class="fas fa-angle-double-right"></i></p>
+      <h3>Venue: <%= @poster.venue_name %></h3>
+      <h3></%> On: <%= @poster.date.strftime("#{@poster.date.day.ordinalize} %B %Y") %></h3>
       <h1>£<%= @poster.price %> </h1>
       <% if @poster.sold %>
       <p>Sold!</p>
