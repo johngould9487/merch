@@ -11,23 +11,24 @@
       <p><%= @poster.description %></p>
       <h1>£<%= @poster.price %> </h1>
       <% if @poster.sold %>
-        <p>Sold!</p>
+      <p>Sold!</p>
       <% else %>
-        <%= link_to "Buy Now", new_poster_transaction_path(@poster.id), :class => "btn btn-lg btn-primary"  %>
+      <%= link_to "Buy Now", new_poster_transaction_path(@poster.id), :class => "btn btn-lg btn-primary"  %>
       <% end %>
-      <div class="user-info">
-        <div class="seller">
-          <h3>Who's selling?</h3>
+      <div class="seller">
+        <div style="width:100%; height:1px; border: 1px solid #3AA0C5"></div>
+        <div>
+          <%= image_tag @poster.user.avatar, alt: "alttext", style: "margin-top:-30px;", class: "avatar" %>
         </div>
-        <div class="seller-info">
-          <p>Hello, my name is John. I am a poster enthusiast! I have a big collection of
-            posters from many concerts! Please feel free to send me an email to get more information
-            for this poster! </p>
-          </div>
-          <div class="seller-handle">
-            <p> Contact: <%= @poster.user.email %> </p>
-          </div>
+        <div class="seller-contact">
+          <%= @poster.user.email %>
+        </div>
+        <div class="seller-bio">
+          <i class="fas fa-quote-left"></i>
+          <%= @poster.user.bio %>
+          <i class="fas fa-quote-right"></i>
         </div>
       </div>
     </div>
   </div>
+</div>

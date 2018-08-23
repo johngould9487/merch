@@ -227,9 +227,9 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
-  bootstrap-sass (~> 3.3)
   carrierwave (~> 1.2)
   cloudinary
+  bootstrap-sass (~> 3.3.7)
   devise
   dotenv-rails
   font-awesome-sass (~> 5.0.9)

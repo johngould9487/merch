@@ -20,7 +20,7 @@ users = [
   User.create(email: "andy@andy.com", password: "123123", bio: "Roll up, roll up, get your loevly posters here. Drop me a line for all your poster needs. Old skool cool is my thing", username: "andyL123", avatar: "https://res.cloudinary.com/duspt82gb/image/upload/v1535026988/Avatar/Andy.jpg"),
  User.create(email: "alex@alex.com", password: "123123", bio: "I have loads of posters for sale and am always looking for rare finds to add to my collection", username: "AKA51", avatar: "https://res.cloudinary.com/duspt82gb/image/upload/v1535026989/Avatar/Alex_Kelly.png"),
   User.create(email: "syed@syed.com", password: "123123", bio: "I love the design of gig posters and have a huge collection from across the decades. Check out my profile to see everything that I have listed at the moment", username: "SyedAA", avatar: "https://res.cloudinary.com/duspt82gb/image/upload/v1535026988/Avatar/Syed.png"),
-  User.create(email: "john@john.com", password: "123123", bio: "I have loads of posters for sale and am always looking for rare finds to add to my collection", username: "AKA51", avatar: "https://res.cloudinary.com/duspt82gb/image/upload/v1535026989/Avatar/Alex_Kelly.png")
+  User.create(email: "john@john.com", password: "123123", bio: "I have loads of posters for sale and am always looking for rare finds to add to my collection", username: "Gouldy123", avatar: "https://res.cloudinary.com/duspt82gb/image/upload/v1535026989/Avatar/Alex_Kelly.png")
 ]
 
 Poster.create!(sold: false, user: users.sample, venue_name: "Apollo", artist_name: "James Blake", description: "Great gig, great poster, great band", price: 40, remote_photo_url: "https://res.cloudinary.com/duspt82gb/image/upload/v1534947778/James_Blake.jpg", date: Time.now)

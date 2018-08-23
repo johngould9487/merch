@@ -26,7 +26,7 @@
 
            <div class="card-description">
               <h4><%= poster.artist_name %></h4>
-              <p> <%= poster.venue_name %> - <%= poster.date %> </p>
+              <p> <%= poster.venue_name %> - <%= poster.date.strftime("#{poster.date.day.ordinalize} %B %Y") %> </p>
 
               <div class="price">
                 <h3>£<%= poster.price %> </h3>
