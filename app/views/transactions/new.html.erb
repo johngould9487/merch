@@ -1,4 +1,16 @@
-<%= simple_form_for([@poster, @transaction]) do |f| %>
-  <%= f.submit "Confirm Purchase", class: "btn btn-primary" %>
-<% end %>
-
+<div class="container show-details">
+  <div class="row">
+    <div class="col-sm-5">
+      <img src=" <%= @poster.photo %> "
+      style="width: 400px; height: 600px;">
+    </div>
+    <div class="col-sm-7">
+      <h1><%= @poster.artist_name%></h1>
+      <h2>Buying from: <%= @poster.user.email %></h2>
+      <h2>You pay: £<%= @poster.price %> </h2>
+      <%= simple_form_for([@poster, @transaction]) do |f| %>
+        <%= f.submit "Confirm Purchase", class: "btn btn-lg btn-success" %>
+      <% end %>
+    </div>
+  </div>
+</div>
