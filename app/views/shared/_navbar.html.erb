@@ -4,21 +4,19 @@
     <%= link_to root_path, class: "navbar-wagon-brand" do %>
       <%= image_tag "poster.jpg", height: 50 %>
     <% end %>
-<!--
-    <div class="box"> -->
-      <div class="search-bar">
-        <span class="icon"><i class="fa fa-search"></i></span>
-        <input type="search" id="search" placeholder="Search..." />
-      </div>
-<!--     </div> -->
+<!--<div class="box"> -->
+    <div class="search-bar">
+      <%= form_tag posters_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a poster..." %>
+<!--     <input type="search" id="search" placeholder="Search..." /> -->
+      <span id="magnify" class="icon"><i class="fa fa-search"></i></span>
+    </div>
   </div>
-  <%= form_tag posters_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a poster"
-    %>
   <% end %>
+
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
