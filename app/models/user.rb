@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :posters
   has_many :transactions
+  validates :username, :bio, :avatar, presence: true
 end
