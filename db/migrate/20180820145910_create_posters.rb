@@ -4,7 +4,7 @@ class CreatePosters < ActiveRecord::Migration[5.2]
       t.text :description
       t.date :date
       t.integer :price
-      t.text :photo
+      t.string :photo
       t.references :artist, foreign_key: true
       t.references :venue, foreign_key: true
       t.references :user, foreign_key: true

@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-    @posters = Poster.first(10)
+    @posters = Poster.all
   end
 end
