@@ -10,7 +10,8 @@
         <%= f.input :description, label: "Tell us more about this poster" %>
         <%= f.input :date, as: :string, input_html: { class: "datepicker" }, label: "What date was the gig?", required: false %>
         <%= f.input :price, label: "Price in GBP" %>
-        <%= f.input :photo, label: "Photo url" %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
         <%= f.submit "List Poster for sale!", class: "sell-btn btn-lg btn btn-primary" %>
       <% end %>
   </div>
