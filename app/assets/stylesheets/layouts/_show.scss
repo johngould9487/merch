@@ -1,9 +1,3 @@
-.user-info {
-  position: relative;
-  background-color: white;
-  height:170px;
-  margin-top: 20px;
-}
 
 .show-details{
   color: #888;
@@ -15,23 +9,21 @@
 
 .user-info h3 {
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .seller {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  margin-top: 50px;
+  text-align: center;
 }
 
-.seller-info {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+
+.seller .avatar{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }
 
-.seller-handle {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+.seller-bio {
+  margin-top: 30px;
 }
-
