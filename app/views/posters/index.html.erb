@@ -10,36 +10,7 @@
 
 <div class="container">
   <div class="row">
-
-
-
-    <% @posters.each do |poster| %>
-      <div class="col-xs-12 col-sm-3">
-        <div class="card" >
-
-          <div class="card-container" style="background-image:  url(<%= poster.photo %>);">
-            <div class="card-category">
-
-
-            </div>
-          </div>
-
-           <div class="card-description">
-              <h4><%= poster.artist_name %></h4>
-              <p> <%= poster.venue_name %> - <%= poster.date.strftime("#{poster.date.day.ordinalize} %B %Y") %> </p>
-
-              <div class="price">
-                <h3>£<%= poster.price %> </h3>
-              </div>
-            </div>
-            <%= link_to "", poster_path(poster.id), class: "card-link" %>
-          </div>
-
-        </div>
-
-    <% end %>
-
-
+    <%= render 'shared/card' %>
   </div>
 </div>
 
