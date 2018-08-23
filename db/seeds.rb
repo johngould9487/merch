@@ -18,6 +18,8 @@ puts "Creating database..."
 
 user = User.create(email: "andy@andy.com", password: "123123")
 user = User.create(email: "alex@alex.com", password: "123123")
+user = User.create(email: "syed@syed.com", password: "123123")
+user = User.create(email: "john@john.com", password: "123123")
 
 Poster.create!(sold: false, user: user, venue_name: "Apollo", artist_name: "James Blake", description: "Great gig, great poster, great band", price: 40, photo: "https://res.cloudinary.com/duspt82gb/image/upload/v1534947778/James_Blake.jpg", date: Time.now)
 
