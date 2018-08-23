@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2018_08_23_120557) do
     t.text "description"
     t.date "date"
     t.integer "price"
-    t.string "photo"
+    t.text "photo"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
