@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_21_111712) do
+ActiveRecord::Schema.define(version: 2018_08_23_074737) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2018_08_21_111712) do
     t.datetime "updated_at", null: false
     t.string "artist_name"
     t.string "venue_name"
+    t.boolean "sold"
     t.index ["user_id"], name: "index_posters_on_user_id"
   end
 

@@ -10,7 +10,11 @@
       <h2></%> On: <%= @poster.date.strftime("#{@poster.date.day.ordinalize} %B %Y") %></h2>
       <p><%= @poster.description %></p>
       <h1>£<%= @poster.price %> </h1>
-      <%= link_to "Buy Now", '#', :class => "btn btn-lg btn-danger"  %>
+      <% if @poster.sold %>
+        <p>Sold!</p>
+      <% else %>
+        <%= link_to "Buy Now", new_poster_transaction_path(@poster.id), :class => "btn btn-lg btn-danger"  %>
+      <% end %>
       <div class="user-info">
         <div class="seller">
           <h3>Who's selling?</h3>
