@@ -4,7 +4,7 @@
       <%# image_tag url('@poster.photo'), width: '400', height: '600', align: 'left'%>
       <% if @poster.sold %>
         <%= cl_image_tag @poster.photo, height: 540, crop: :fill %>
-        <%= image_tag "sold.png", alt: "alttext", class: "sold", style: "height: 120px; margin-to:2%; margin-right:13.5%;" %>
+        <%= image_tag "sold.png", alt: "alttext", class: "sold", style: "height: 120px; margin-top:2%; margin-right:22.1%;" %>
       <% else %>
        <%= cl_image_tag @poster.photo, height: 540, crop: :fill %>
       <% end %>
