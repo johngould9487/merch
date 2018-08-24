@@ -1,18 +1,26 @@
 <div class="container show-details">
   <div class="row">
-    <div class="col-sm-5 image-display">
+    <div class="col-sm-5 image-display-sell">
       <%# image_tag url('@poster.photo'), width: '400', height: '600', align: 'left'%>
-
-      <%= cl_image_tag @poster.photo, height: 540, crop: :fill %>
+      <% if @poster.sold %>
+        <%= cl_image_tag @poster.photo, height: 540, crop: :fill %>
+        <%= image_tag "sold.png", alt: "alttext", class: "sold", style: "height: 120px; margin-to:2%; margin-right:13.5%;" %>
+      <% else %>
+       <%= cl_image_tag @poster.photo, height: 540, crop: :fill %>
+      <% end %>
     </div>
     <div class="col-sm-7 poster-desciption-show">
       <h1><%= @poster.artist_name%></h1>
       <p><i class="fas fa-angle-double-left"></i> <%= @poster.description %> <i class="fas fa-angle-double-right"></i></p>
       <h3>Venue: <%= @poster.venue_name %></h3>
       <h3></%> On: <%= @poster.date.strftime("#{@poster.date.day.ordinalize} %B %Y") %></h3>
-      <h1>£<%= @poster.price %> </h1>
       <% if @poster.sold %>
-      <p>Sold!</p>
+        <h1><strike>£<%= @poster.price %></strike></h1>
+      <% else %>
+        <h1>£<%= @poster.price %> </h1>
+      <% end %>
+      <% if @poster.sold %>
+        <p></p>
       <% else %>
       <%= link_to "Buy Now", new_poster_transaction_path(@poster.id), :class => "btn btn-lg btn-primary"  %>
       <% end %>
