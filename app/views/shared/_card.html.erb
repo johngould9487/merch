@@ -9,7 +9,11 @@
       <div class="info-holder">
         <div class="card-description">
           <h4><%= poster.artist_name %></h4>
-          <h4>£<%= poster.price %> </h4>
+          <% if poster.sold %>
+            <h4><strike>£<%= poster.price %></strike></h4>
+          <% else %>
+            <h4>£<%= poster.price %> </h4>
+          <% end %>
         </div>
         <div class="date-place">
           <p> <%= poster.venue_name %> - <%= poster.date.strftime("#{poster.date.day.ordinalize} %B %Y") %>
