@@ -1,7 +1,7 @@
 .sell-div {
   display: flex;
   border: 1px none black;
-  // box-shadow: 1px 2px #888888;
+  margin-bottom: 20px;
 }
 
 .image {
@@ -18,4 +18,9 @@
 
 .sell-div h1 {
   color: $red;
+}
+
+.sell-page h1 {
+  color: $red;
+  text-align: center;
 }
