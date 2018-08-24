@@ -1,7 +1,7 @@
 <div class="container">
   <div class="sell-div">
     <div class="image">
-      <%= image_tag "poster.jpg", alt: "alttext", size: "550x700" %>
+      <%#= image_tag , alt: "alttext", size: "550x700" %>
     </div>
     <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
         <%= simple_form_for @poster do |f| %>
@@ -12,7 +12,7 @@
           <%= f.input :price, label: "Price in GBP" %>
           <%= f.input :photo %>
           <%= f.input :photo_cache, as: :hidden %>
-          <%= f.submit "List Poster for sale!", class: "sell-btn btn-lg btn btn-primary" %>
+          <%= f.submit "List Poster for sale!", class: "sell-btn btn-lg btn btn-danger" %>
         <% end %>
     </div>
   </div>
