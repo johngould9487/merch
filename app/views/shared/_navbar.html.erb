@@ -8,9 +8,10 @@
       <%= form_tag posters_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
+          id: "roundedsearch",
           class: "form-control",
           placeholder: "Find a poster..." %>
-      <span id="magnify" class="icon"><i class="fa fa-search"></i></span>
+      <span id="magnify" class="icon"><i id="mag" class="fa fa-search"></i></span>
     </div>
   </div>
   <% end %>
