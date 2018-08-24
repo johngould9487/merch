@@ -2,6 +2,9 @@
   <div class="col-xs-12 col-sm-3">
     <div class="card" >
       <div class="card-container" style="background-image: url(<%= poster.photo %>);">
+        <% if poster.sold %>
+          <%= image_tag "sold.png", alt: "alttext", class: "sold", style: "height: 120px;" %>
+        <% end %>
       </div>
       <div class="info-holder">
         <div class="card-description">
