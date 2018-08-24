@@ -24,8 +24,8 @@ users = [
 ]
 
 years = (1975..2018).to_a
-days = (0..28).to_a
-months = (0..12).to_a
+days = (1..28).to_a
+months = (1..12).to_a
 Poster.create!(sold: false, user: users.sample, venue_name: "Apollo", artist_name: "James Blake", description: "Great gig, great poster, great band", price: 40, remote_photo_url: "https://res.cloudinary.com/duspt82gb/image/upload/v1534947778/James_Blake.jpg", date: Time.new(years.sample, months.sample, days.sample))
 
 Poster.create!(sold: false, user: users.sample, venue_name: "The Roundhouse", artist_name: "Patrick Wolf", description: "Outstanding gig, you should have been there", price: 20, remote_photo_url: "https://res.cloudinary.com/duspt82gb/image/upload/v1534947778/Patrick_Wolf.jpg", date: Time.new(years.sample, months.sample, days.sample))
