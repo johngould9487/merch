@@ -56,3 +56,12 @@
   margin-top: 15px;
 
 }
+
+.stick-together {
+  position: relative;
+  .sold {
+    position: absolute;
+    top: 0;
+    right: 55px;
+  }
+}

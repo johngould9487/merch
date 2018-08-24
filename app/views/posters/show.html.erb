@@ -3,10 +3,12 @@
     <div class="col-sm-5 image-display-sell">
       <%# image_tag url('@poster.photo'), width: '400', height: '600', align: 'left'%>
       <% if @poster.sold %>
-        <%= cl_image_tag @poster.photo, height: 540, crop: :fill %>
-        <%= image_tag "sold.png", alt: "alttext", class: "sold", style: "height: 120px; margin-top:2%; margin-right:22.1%;" %>
+        <div class="stick-together">
+          <%= cl_image_tag @poster.photo, width: 405, crop: :fill %>
+          <%= image_tag "sold.png", alt: "alttext", class: "sold", style: "height: 120px;" %>
+        </div>
       <% else %>
-       <%= cl_image_tag @poster.photo, height: 540, crop: :fill %>
+       <%= cl_image_tag @poster.photo, width: 405, crop: :fill %>
       <% end %>
     </div>
     <div class="col-sm-7 poster-desciption-show">
