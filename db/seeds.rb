@@ -69,7 +69,7 @@ Poster.create!(sold: false, user: users.sample, venue_name: "The Roundhouse", ar
 Poster.create!(sold: false, user: users.sample, venue_name: "Woodstock", artist_name: "Nirvana", description: "Great gig, great poster", price: 1000, remote_photo_url: "https://res.cloudinary.com/duspt82gb/image/upload/v1535027003/Posters/Nirvana.jpg", date: Time.new(years.sample, months.sample, days.sample))
 
 
-Poster.create!(sold: false, user: users.sample, venue_name: "The Roundhouse", artist_name: "North Coast Music Fest", description: "Great gig, great poster", price: 300, remote_photo_url: "https://res.cloudinary.com/duspt82gb/image/upload/v1535027003/Posters/North_coast_music_fest.jpg", date: Time.new(years.sample, months.sample, days.sample))
+Poster.create!(sold: false, user: users.sample, venue_name: "Union Park", artist_name: "North Coast Fest", description: "Great gig, great poster", price: 300, remote_photo_url: "https://res.cloudinary.com/duspt82gb/image/upload/v1535027003/Posters/North_coast_music_fest.jpg", date: Time.new(years.sample, months.sample, days.sample))
 
 
 Poster.create!(sold: false, user: users.sample, venue_name: "The Roundhouse", artist_name: "Joy Division", description: "Great gig, great poster", price: 450, remote_photo_url: "https://res.cloudinary.com/duspt82gb/image/upload/v1535027003/Posters/Jou_Division.jpg", date: Time.new(years.sample, months.sample, days.sample))
@@ -84,7 +84,7 @@ Poster.create!(sold: false, user: users.sample, venue_name: "The Roundhouse", ar
 Poster.create!(sold: false, user: users.sample, venue_name: "The Roundhouse", artist_name: "Lykke Li", description: "Great gig, great poster", price: 35, remote_photo_url: "https://res.cloudinary.com/duspt82gb/image/upload/v1535027003/Posters/lykke_li.jpg", date: Time.new(years.sample, months.sample, days.sample))
 
 
-Poster.create!(sold: false, user: users.sample, venue_name: "O2", artist_name: "Florence and the Machine", description: "Great gig, great poster", price: 100, remote_photo_url: "https://res.cloudinary.com/duspt82gb/image/upload/v1535027003/Posters/Florence_Machine.jpg", date: Time.new(years.sample, months.sample, days.sample))
+Poster.create!(sold: false, user: users.sample, venue_name: "O2", artist_name: "Florence & the Machine", description: "Great gig, great poster", price: 100, remote_photo_url: "https://res.cloudinary.com/duspt82gb/image/upload/v1535027003/Posters/Florence_Machine.jpg", date: Time.new(years.sample, months.sample, days.sample))
 
 
 Poster.create!(sold: false, user: users.sample, venue_name: "The Roundhouse", artist_name: "Grimes", description: "Great gig, great poster", price: 45, remote_photo_url: "https://res.cloudinary.com/duspt82gb/image/upload/v1535027003/Posters/grimes.jpg", date: Time.new(years.sample, months.sample, days.sample))
